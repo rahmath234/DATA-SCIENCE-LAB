@@ -1,0 +1,17 @@
+library(class)
+survey=read.csv("survey.csv")
+student=data.frame(x=5, y=7)
+survey1=survey[,1:2]
+pred=knn(survey1,student,survey$z,k=3)
+cat("predictrd classification of student:\n")
+print(pred)
+
+
+survey.csv(new file)
+x,y,z
+2,3,Low
+3,4,Low
+4,5,Low
+6,7,High
+7,8,High
+8,9,High
